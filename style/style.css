@@ -1,0 +1,145 @@
+@font-face {
+  font-family: SourceSansProRegular;
+  src: url(/fonts/SourceSansPro-Regular.otf);
+}
+
+@font-face {
+  font-family: Source-Sans-Pro-Bold-It;
+  src: url(/fonts/SourceSansPro-BoldIt.otf);
+}
+
+.main-header {
+  position: absolute;
+}
+
+h1.title {
+  margin: 0;
+  font-family: Source-Sans-Pro-Bold-It, Calibri, Sans-Serif;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: solid;
+  border-width: 2px;
+  border-color: black;
+  text-transform: uppercase;
+  font-family: SourceSansProRegular, Calibri, Sans-Serif;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+}
+
+div.main-buttons {
+  margin-top: 2em;
+}
+
+div.main-button {
+  margin: 0.4em 0;
+}
+
+button.main-button {
+  padding: 0.4em;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+  border: solid;
+  border-width: 2px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.photo-container-1, .main-photo-1 {
+  margin: 0 auto;
+  display: block;
+}
+
+.photo-container-2, .main-photo-2, .main-button {
+  margin: auto;
+  display: block;
+}
+
+.main-photo-1 {
+  background-image: url(../images/main_photo_1a_420.jpg);
+}
+
+.main-photo-1:hover {
+  background-image: url(../images/main_photo_1b_420.jpg);
+}
+
+.main-photo-2 {
+  background-image: url(../images/main_photo_2a_420.jpg);
+}
+
+.main-photo-2:hover {
+  background-image: url(../images/main_photo_2b_420.jpg);
+}
+
+@media (min-width: 1200px) {
+  h1.title {
+    font-size: 90px;
+    margin: 1.1em 0 0 -0.4em;
+  }
+  .main-photo-2 {
+    width: 420px;
+    height: 280px;
+    margin-top: 6em;
+  }
+  .main-photo-1 {
+    width: 420px;
+    height: 560px;
+    margin-top: 5em;
+  }
+  .main-container {
+    padding: 0 9em;
+  }
+  button.main-button {
+    width: 450px;
+  }
+}
+
+/* @media (min-width: 970px) and (max-width: 1200px) */
+@media (min-width: 768px) and (max-width: 970px) {
+  h1.title {
+    font-size: 90px;
+    margin: 0.3em 0 0 1em;
+  }
+  .main-photo-1 {
+    width: 420px;
+  }
+  .main-photo-2 {
+    width: 450px;
+    margin-top: 2em;
+  }
+  .main-container {
+    padding: 0 5em;
+  }
+  button.main-button {
+    width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1.title {
+    font-size: 60px;
+  }
+  .main-photo-1 {
+    width: 320px;
+  }
+  .main-photo-2 {
+    width: 280px;
+  }
+  button.main-button {
+    width: 280px;
+  }
+}
