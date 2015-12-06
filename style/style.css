@@ -1,11 +1,6 @@
-@font-face {
-  font-family: SourceSansProRegular;
-  src: url(/fonts/SourceSansPro-Regular.otf);
-}
-
-@font-face {
-  font-family: Source-Sans-Pro-Bold-It;
-  src: url(/fonts/SourceSansPro-BoldIt.otf);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,700italic,300);
+.row {
+  margin: 0;
 }
 
 .main-header {
@@ -14,12 +9,30 @@
 
 h1.title {
   margin: 0;
-  font-family: Source-Sans-Pro-Bold-It, Calibri, Sans-Serif;
+  font-family: "Source Sans Pro", Calibri, Sans-Serif;
   text-transform: uppercase;
+  font-weight: 700;
+  font-style: italic;
+  margin: 1.1em 0 0 -0.4em;
+}
+
+h1.greeting {
+  margin: 0;
+  font-family: "Source Sans Pro", Calibri, Sans-Serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 55px;
+  text-align: center;
+}
+
+h1.title {
+  font-size: 90px;
+  margin: 0.2em 0 0 -0.4em;
 }
 
 p {
   margin: 0;
+  text-align: center;
 }
 
 button {
@@ -29,7 +42,7 @@ button {
   border-width: 2px;
   border-color: black;
   text-transform: uppercase;
-  font-family: SourceSansProRegular, Calibri, Sans-Serif;
+  font-family: "Source Sans Pro", Calibri, Sans-Serif;
   font-size: 0.9em;
   letter-spacing: 2px;
 }
@@ -44,6 +57,7 @@ div.main-button {
 
 button.main-button {
   padding: 0.4em;
+  width: 420px;
 }
 
 button:hover {
@@ -69,8 +83,14 @@ button:hover {
   display: block;
 }
 
+.photo-container-2 {
+  margin-top: 1.5em;
+}
+
 .main-photo-1 {
   background-image: url(../images/main_photo_1a_420.jpg);
+  width: 420px;
+  height: 560px;
 }
 
 .main-photo-1:hover {
@@ -79,67 +99,111 @@ button:hover {
 
 .main-photo-2 {
   background-image: url(../images/main_photo_2a_420.jpg);
+  width: 420px;
+  height: 280px;
 }
 
 .main-photo-2:hover {
   background-image: url(../images/main_photo_2b_420.jpg);
 }
 
-@media (min-width: 1200px) {
-  h1.title {
-    font-size: 90px;
-    margin: 1.1em 0 0 -0.4em;
-  }
-  .main-photo-2 {
-    width: 420px;
-    height: 280px;
-    margin-top: 6em;
-  }
-  .main-photo-1 {
-    width: 420px;
-    height: 560px;
-    margin-top: 5em;
-  }
+.main-container {
+  margin-top: 5em;
+  padding: 0 8em;
+}
+
+.about-container {
+  margin: 16em auto;
+  padding: 4em 0;
+  background-color: #FCFAE3;
+  -webkit-transform: skewY(-1.5deg);
+  -moz-transform: skewY(-1.5deg);
+  -ms-transform: skewY(-1.5deg);
+  -o-transform: skewY(-1.5deg);
+  transform: skewY(-1.5deg);
+  transform-margin: 0;
+}
+
+.about-container .greeting {
+  text-decoration: underline;
+  transform: skewY(1.5deg);
+}
+
+.about-container .about-description {
+  padding: 2em 9em;
+  font-family: "Source Sans Pro", Calibri, Sans-Serif;
+  letter-spacing: 2px;
+  transform: skewY(1.5deg);
+}
+
+.about-container .about-description p {
+  font-size: 15px;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
   .main-container {
-    padding: 0 9em;
-  }
-  button.main-button {
-    width: 450px;
+    padding: 0 4.8em;
   }
 }
 
-/* @media (min-width: 970px) and (max-width: 1200px) */
-@media (min-width: 768px) and (max-width: 970px) {
+@media (min-width: 768px) and (max-width: 992px) {
   h1.title {
     font-size: 90px;
     margin: 0.3em 0 0 1em;
   }
   .main-photo-1 {
     width: 420px;
+    height: 560px;
   }
   .main-photo-2 {
-    width: 450px;
+    width: 420px;
+    height: 280px;
     margin-top: 2em;
   }
   .main-container {
     padding: 0 5em;
   }
   button.main-button {
-    width: 450px;
+    width: 420px;
+  }
+  .about-container {
+    margin: 10em 0;
   }
 }
 
 @media (max-width: 768px) {
   h1.title {
-    font-size: 60px;
+    font-size: 70px;
   }
   .main-photo-1 {
     width: 320px;
+    height: 460px;
+  }
+  .main-photo-1:hover {
+    background-image: url(../images/main_photo_1a_420.jpg);
   }
   .main-photo-2 {
-    width: 280px;
+    width: 0px;
+    height: 0px;
+  }
+  .main-container {
+    padding: 0 2em;
   }
   button.main-button {
-    width: 280px;
+    width: 320px;
+  }
+  .about-container {
+    margin: 10em auto;
+  }
+  .about-container .greeting {
+    font-size: 60px;
+  }
+  .about-container .about-description {
+    padding: 3em 5em;
+    font-family: "Source Sans Pro", Calibri, Sans-Serif;
+    letter-spacing: 2px;
+  }
+  .about-container .about-description p {
+    font-size: 15px;
   }
 }

@@ -1,11 +1,11 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var input = './sass/*.sass';
-var output = './style';
-var sassOptions = { 
-	errLogToConsole: true,
-	outputStyle: 'expanded'
-};
+    sass = require('gulp-sass'),
+    input = './sass/*.sass',
+    output = './style',
+    sassOptions = { 
+    	errLogToConsole: true,
+    	outputStyle: 'expanded'
+    };
 
 gulp.task('default', ['sass', 'watch']);
 

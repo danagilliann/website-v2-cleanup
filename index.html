@@ -26,21 +26,29 @@
 	<body ng-controller="MainController">
 		<div class="main-container row">
 		 <div class="photo-container-1 col-md-6">
-		   <div class="main-header"><h1 class="title">Dana Lee</h1></div>
+           <div class="main-header"><h1 class="title">{{ title }}</h1></div>
 		   <div class="main-photo-1"></div>
 		 </div>
 		 <div class="photo-container-2 col-md-6">
 		   <div class="main-photo-2"></div>
 		   <div class="main-buttons">
-		     <div class="main-button"><button class="main-button"><p>About</p></button></div>
-		     <div class="main-button"><button class="main-button"><p>Links</p></button></div>
-		     <div class="main-button"><button class="main-button"><p>Portfolio</p></button></div>
-		     <div class="main-button"><button class="main-button"><p>Projects</p></button></div>
-		     <div class="main-button"><button class="main-button"><p>Let's get food!!!!</p></button></div>
+             <div class="main-button" ng-repeat="buttonGuide in buttonGuides">
+               <button class="main-button"><p>{{ buttonGuide.info }}</p></button>
+             </div>
 		   </div>
 		 </div>
 		</div>
-	
+
+        <div class="about-container row">
+          <div class="hello-world"><h1 class="greeting">{{ greeting }}</h1></div>
+          <div class="about-description">
+            <p>{{ aboutDescription }}</p>
+            <br><br>
+            <p>This website is (always) a work in progress and is made with <span class="glyphicon glyphicon-heart"></span></p>
+                <h1 class="hidden">Dana Gilliann</h1> 
+                </div>
+        </div>
+
 	</body>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>		
