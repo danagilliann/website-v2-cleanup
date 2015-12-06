@@ -15,25 +15,26 @@
 		
 		<title>Dana Lee - coding + food</title>
 		
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 		<link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/animate.css">
 	</head>
 
 	<body ng-controller="MainController">
 		<div class="main-container row">
-		 <div class="photo-container-1 col-md-6">
-           <div class="main-header"><h1 class="title">{{ title }}</h1></div>
+		 <div class="photo-container-1 col-md-6 animated fadeInLeft">
+           <div class="main-header"><h1 class="title animated fadeIn">{{ title }}</h1></div>
 		   <div class="main-photo-1"></div>
 		 </div>
 		 <div class="photo-container-2 col-md-6">
-		   <div class="main-photo-2"></div>
+		   <div class="main-photo-2 animated fadeInRight"></div>
 		   <div class="main-buttons">
              <div class="main-button" ng-repeat="buttonGuide in buttonGuides">
-               <button class="main-button"><p>{{ buttonGuide.info }}</p></button>
+               <button class="main-button animated fadeIn"><p>{{ buttonGuide.info }}</p></button>
              </div>
 		   </div>
 		 </div>
@@ -54,6 +55,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>		
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 	<script src="js/app.js"></script>
+    <script src="js/animation.js"></script>
 
 </html>
 
