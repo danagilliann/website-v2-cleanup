@@ -34,7 +34,7 @@
 		   <div class="main-photo-2 animated fadeInRight"></div>
 		   <div class="main-buttons">
              <div class="main-button" ng-repeat="buttonGuide in buttonGuides">
-               <button class="main-button animated fadeIn"><p>{{ buttonGuide.info }}</p></button>
+               <button class="main-button animated fadeIn" id="{{ buttonGuide.id}}"><p>{{ buttonGuide.title }}</p></button>
              </div>
 		   </div>
 		 </div>
@@ -43,18 +43,26 @@
         <div class="about-container row">
           <div class="hello-world"><h1 class="greeting">{{ greeting }}</h1></div>
           <div class="about-description">
-            <p>{{ aboutDescription }}</p>
+            <p class="anim-description">{{ aboutDescription }}</p>
             <br><br>
-            <p>This website is (always) a work in progress and is made with <span class="glyphicon glyphicon-heart"></span></p>
+            <p class="anim-description">This website is (always) a work in progress and is made with <span class="glyphicon glyphicon-heart"></span></p>
                 <h1 class="hidden">Dana Gilliann</h1> 
-                </div>
+          </div>
         </div>
+
+        <div class="links-container row">
+          <div id="links-header"><h1 class="greeting">{{ linkHeader }}</h1></div>
+          <div class="links-button-container">
+            <span ng-repeat="linkLi in linkList"><a href="{{ linkLi.href }}"><button id="{{ linkLi.id }}"><p>{{ linkLi.title }}</p></button></a></span>
+          </div>
+        </div>
+
 
 	</body>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>		
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-	<script src="js/app.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/animation.js"></script>
 
 </html>

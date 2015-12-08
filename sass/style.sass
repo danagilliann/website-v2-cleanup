@@ -3,6 +3,7 @@
 $regular: 'Source Sans Pro', Calibri, Sans-Serif
 $bold-italic: 'Source Sans Pro', Calibri, Sans-Serif
 $light-yellow: #FCFAE3
+$light-pink: #FDE8E7
 
 .row
   margin: 0
@@ -107,6 +108,9 @@ button:hover
   margin-top: 5em
   padding: 0 8em
 
+.greeting
+  text-decoration: underline
+
 .about-container
   margin: 16em auto
   padding: 4em 0
@@ -116,11 +120,8 @@ button:hover
   -ms-transform: skewY(-1.5deg)
   -o-transform: skewY(-1.5deg)
   transform: skewY(-1.5deg)
-    margin: 0
-
 
   .greeting
-    text-decoration: underline
     transform: skewY(1.5deg)
 
   .about-description
@@ -131,6 +132,27 @@ button:hover
 
     p
       font-size: 15px
+
+.links-container
+  margin: 1em 0em 0em 0em
+  padding: 3em 0em 7.5em 0em
+  background-color: $light-pink
+  height: auto
+  -webkit-transform: skewY(1.5deg)
+  -moz-transform: skewY(1.5deg)
+  -ms-transform: skewY(1.5deg)
+  -o-transform: skewY(1.5deg)
+  transform: skewY(1.5deg)
+
+  .links-button-container 
+    display: inline
+    text-align: center
+    -webkit-transform: skewY(-1.5deg)
+    -moz-transform: skewY(-1.5deg)
+    -ms-transform: skewY(-1.5deg)
+    -o-transform: skewY(-1.5deg)
+    transform: skewY(-1.5deg)
+
 
 // @media (min-width: 1200px)
 
@@ -183,7 +205,7 @@ button:hover
     width: 320px
 
   .about-container
-    margin: 10em auto
+    margin: 7em auto
 
     .greeting
       font-size: 60px
