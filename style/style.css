@@ -120,20 +120,37 @@ button:hover {
   padding: 0 8em;
 }
 
-.about-container {
-  margin: 16em auto;
-  padding: 4em 0;
-  background-color: #FCFAE3;
+.greeting {
+  text-decoration: underline;
+}
+
+.about-container, .links-header, .links-button-container {
   -webkit-transform: skewY(-1.5deg);
   -moz-transform: skewY(-1.5deg);
   -ms-transform: skewY(-1.5deg);
   -o-transform: skewY(-1.5deg);
   transform: skewY(-1.5deg);
-  transform-margin: 0;
+}
+
+.about-description, .links-container, .about-description {
+  -webkit-transform: skewY(1.5deg);
+  -moz-transform: skewY(1.5deg);
+  -ms-transform: skewY(1.5deg);
+  -o-transform: skewY(1.5deg);
+  transform: skewY(1.5deg);
+}
+
+.about-container {
+  margin: 16em auto 0em;
+  padding: 4em 0;
+  background-color: #FCFAE3;
 }
 
 .about-container .greeting {
-  text-decoration: underline;
+  -webkit-transform: skewY(1.5deg);
+  -moz-transform: skewY(1.5deg);
+  -ms-transform: skewY(1.5deg);
+  -o-transform: skewY(1.5deg);
   transform: skewY(1.5deg);
 }
 
@@ -146,6 +163,38 @@ button:hover {
 
 .about-container .about-description p {
   font-size: 15px;
+}
+
+.links-container {
+  margin: 1em auto;
+  padding: 3em 0em 7.5em 0em;
+  background-color: #FDE8E7;
+  text-align: center;
+}
+
+.links-container .greeting {
+  text-align: left;
+  padding-left: 2em;
+}
+
+.links-container .greeting, .links-container .links-button-container, .links-container .foo {
+  -webkit-transform: skewY(-1.5deg);
+  -moz-transform: skewY(-1.5deg);
+  -ms-transform: skewY(-1.5deg);
+  -o-transform: skewY(-1.5deg);
+  transform: skewY(-1.5deg);
+}
+
+.links-container .links-button-container {
+  margin-top: 1em;
+  display: inline;
+  text-align: center;
+}
+
+.links-container button {
+  margin: 1em auto;
+  width: 190px;
+  padding: 0.5em;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -201,7 +250,7 @@ button:hover {
     width: 320px;
   }
   .about-container {
-    margin: 10em auto;
+    margin: 7em auto;
   }
   .about-container .greeting {
     font-size: 60px;

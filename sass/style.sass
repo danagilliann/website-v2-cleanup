@@ -111,17 +111,30 @@ button:hover
 .greeting
   text-decoration: underline
 
-.about-container
-  margin: 16em auto
-  padding: 4em 0
-  background-color: $light-yellow
+.about-container, .links-header, .links-button-container
   -webkit-transform: skewY(-1.5deg)
   -moz-transform: skewY(-1.5deg)
   -ms-transform: skewY(-1.5deg)
   -o-transform: skewY(-1.5deg)
   transform: skewY(-1.5deg)
 
+.about-description, .links-container, .about-description
+  -webkit-transform: skewY(1.5deg)
+  -moz-transform: skewY(1.5deg)
+  -ms-transform: skewY(1.5deg)
+  -o-transform: skewY(1.5deg)
+  transform: skewY(1.5deg)
+
+.about-container
+  margin: 16em auto 0em
+  padding: 4em 0
+  background-color: $light-yellow
+  
   .greeting
+    -webkit-transform: skewY(1.5deg)
+    -moz-transform: skewY(1.5deg)
+    -ms-transform: skewY(1.5deg)
+    -o-transform: skewY(1.5deg)
     transform: skewY(1.5deg)
 
   .about-description
@@ -133,26 +146,33 @@ button:hover
     p
       font-size: 15px
 
+
 .links-container
-  margin: 1em 0em 0em 0em
+  margin: 1em auto
   padding: 3em 0em 7.5em 0em
   background-color: $light-pink
-  height: auto
-  -webkit-transform: skewY(1.5deg)
-  -moz-transform: skewY(1.5deg)
-  -ms-transform: skewY(1.5deg)
-  -o-transform: skewY(1.5deg)
-  transform: skewY(1.5deg)
+  text-align: center
 
-  .links-button-container 
-    display: inline
-    text-align: center
+  .greeting
+    text-align: left
+    padding-left: 2em
+
+  .greeting, .links-button-container, .foo
     -webkit-transform: skewY(-1.5deg)
     -moz-transform: skewY(-1.5deg)
     -ms-transform: skewY(-1.5deg)
     -o-transform: skewY(-1.5deg)
     transform: skewY(-1.5deg)
 
+  .links-button-container 
+    margin-top: 1em
+    display: inline
+    text-align: center
+
+  button
+    margin: 1em auto
+    width: 190px
+    padding: 0.5em
 
 // @media (min-width: 1200px)
 
