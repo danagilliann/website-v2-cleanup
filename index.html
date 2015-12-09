@@ -54,13 +54,12 @@
           <div id="links-header">
             <h1 class="greeting">{{ linkHeader }}</h1>
           </div>
-          <div class="foo">
-          <div class="links-button-container" ng-repeat="linkLi in linkList">
-            <!--span ng-repeat="linkLi in linkList"-->
-              <a href="{{ linkLi.href }}">
-                <button id="{{ linkLi.id }}"><p>{{ linkLi.title }}</p></button>
-              </a>
-          </div>
+          <div class="links-wrapper">
+            <div class="links-button-container" ng-repeat="linkLi in linkList">
+             <a href="{{ linkLi.href }}">
+               <button id="{{ linkLi.id }}" class="link-a"><p>{{ linkLi.title }}</p></button>
+             </a>
+            </div>
           </div>
         </div>
 

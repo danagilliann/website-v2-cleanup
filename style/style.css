@@ -177,7 +177,7 @@ button:hover {
   padding-left: 2em;
 }
 
-.links-container .greeting, .links-container .links-button-container, .links-container .foo {
+.links-container .greeting, .links-container .links-button-container, .links-container .links-wrapper {
   -webkit-transform: skewY(-1.5deg);
   -moz-transform: skewY(-1.5deg);
   -ms-transform: skewY(-1.5deg);
@@ -185,8 +185,11 @@ button:hover {
   transform: skewY(-1.5deg);
 }
 
+.links-container .links-wrapper {
+  margin: 2em 2em 0em;
+}
+
 .links-container .links-button-container {
-  margin-top: 1em;
   display: inline;
   text-align: center;
 }
@@ -226,6 +229,10 @@ button:hover {
   .about-container {
     margin: 10em 0;
   }
+  .links-container .greeting {
+    text-align: left;
+    padding-left: 1em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -256,11 +263,22 @@ button:hover {
     font-size: 60px;
   }
   .about-container .about-description {
-    padding: 3em 5em;
+    padding: 3em;
     font-family: "Source Sans Pro", Calibri, Sans-Serif;
     letter-spacing: 2px;
   }
   .about-container .about-description p {
     font-size: 15px;
+  }
+  .links-container .links-wrapper {
+    margin: 2em;
+  }
+  .links-container .button {
+    width: 150px;
+    margin: 0;
+  }
+  .links-container .greeting {
+    text-align: left;
+    padding: 0.5em;
   }
 }

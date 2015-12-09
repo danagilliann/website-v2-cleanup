@@ -14,6 +14,11 @@ $(document).ready(function() {
       $('p.about-description').addClass('animated fadeInUp');
     }
 
+    if (height > 600) { 
+      $('#links-header').addClass('animated fadeInUp');
+      $('.link-a').addClass('animated fadeInUp');
+    }
+
   });
 
   /* Main button clicks */

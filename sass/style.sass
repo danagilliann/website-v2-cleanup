@@ -157,15 +157,17 @@ button:hover
     text-align: left
     padding-left: 2em
 
-  .greeting, .links-button-container, .foo
+  .greeting, .links-button-container, .links-wrapper
     -webkit-transform: skewY(-1.5deg)
     -moz-transform: skewY(-1.5deg)
     -ms-transform: skewY(-1.5deg)
     -o-transform: skewY(-1.5deg)
     transform: skewY(-1.5deg)
 
+  .links-wrapper
+    margin: 2em 2em 0em
+
   .links-button-container 
-    margin-top: 1em
     display: inline
     text-align: center
 
@@ -203,6 +205,10 @@ button:hover
   .about-container
     margin: 10em 0
 
+  .links-container .greeting
+    text-align: left
+    padding-left: 1em
+
 @media (max-width: 768px)
   h1.title
     font-size: 70px
@@ -231,11 +237,24 @@ button:hover
       font-size: 60px
   
     .about-description
-      padding: 3em 5em
+      padding: 3em
       font-family: $regular
       letter-spacing: 2px
   
       p
         font-size: 15px
+  
+  .links-container
+    
+    .links-wrapper
+      margin: 2em
 
+    .button
+      width: 150px
+      margin: 0
+
+    .greeting
+      text-align: left
+      padding: 0.5em
+    
 
