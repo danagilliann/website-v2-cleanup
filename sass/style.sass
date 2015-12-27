@@ -1,9 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,700italic,300)
 
+/* Variables */
 $regular: 'Source Sans Pro', Calibri, Sans-Serif
 $bold-italic: 'Source Sans Pro', Calibri, Sans-Serif
 $light-yellow: #FCFAE3
 $light-pink: #FDE8E7
+
+*:hover
+  -webkit-transition: all 0.3s ease
+  -moz-transition: all 0.3s ease
+  -o-transition: all 0.3s ease
+  -ms-transition: all 0.3s ease
+  transition: all 0.3s ease
 
 .row
   margin: 0
@@ -71,11 +79,6 @@ button:hover
   border-color: black
   border: solid
   border-width: 2px
-  -webkit-transition: all 0.5s ease
-  -moz-transition: all 0.5s ease
-  -o-transition: all 0.5s ease
-  -ms-transition: all 0.5s ease
-  transition: all 0.5s ease
 
 .photo-container-1, .main-photo-1
   margin: 0 auto
@@ -86,7 +89,7 @@ button:hover
   display: block
 
 .photo-container-2
-  margin-top: 1.5em
+  margin-top: 2em
 
 .main-photo-1
   background-image: url(../images/main_photo_1a_420.jpg)
@@ -111,6 +114,7 @@ button:hover
 .greeting
   text-decoration: underline
 
+/* Tilt containers to right upwards */
 .about-container, .links-header, .links-button-container
   -webkit-transform: skewY(-1.5deg)
   -moz-transform: skewY(-1.5deg)
@@ -118,6 +122,7 @@ button:hover
   -o-transform: skewY(-1.5deg)
   transform: skewY(-1.5deg)
 
+/* Tilt these containers to the right downwards */
 .about-description, .links-container, .about-description
   -webkit-transform: skewY(1.5deg)
   -moz-transform: skewY(1.5deg)
@@ -125,6 +130,7 @@ button:hover
   -o-transform: skewY(1.5deg)
   transform: skewY(1.5deg)
 
+/* about container */
 .about-container
   margin: 16em auto 0em
   padding: 4em 0
@@ -146,7 +152,7 @@ button:hover
     p
       font-size: 15px
 
-
+/* Links container styles */
 .links-container
   margin: 1em auto
   padding: 3em 0em 7.5em 0em
@@ -176,11 +182,116 @@ button:hover
     width: 190px
     padding: 0.5em
 
-// @media (min-width: 1200px)
+/* portfolio */
+.portfolio-container 
+  margin: 7em 0em 0em 0em
+  padding: 9em 0em 4em 0em
+  background-color: white
+  height: auto
+
+  .greeting
+    text-align: right
+    margin-right: 2em
+
+  .portfolio 
+    overflow-x: scroll
+    overflow-y: hidden
+    width: auto
+    height: 1000px
+    //height: auto
+    background-color: azure 
+    margin: 2em 0em
+    padding: 2em
+    text-align: center
+
+  button
+    width: 171px
+    text-align: center
+    padding: 0.5em
+
+/* projects */
+.projects-container 
+  margin: 9em auto
+  background-color: white
+  height: auto
+  text-align: center
+
+  .greeting
+    text-align: left
+    margin-left: 2em
+    margin-bottom: 1em
+
+  .projects
+    //margin: 1em auto
+    display: inline
+    text-align: center
+
+    a, a:hover
+      text-decoration: none
+
+    button
+      text-align: center
+      width: 480px
+      height: 280px
+      margin: 2em
+      text-transform: none
+      display: inline
+
+    p, p:hover
+      font-family: $regular
+      font-weight: 300
+      text-align: center
+
+    p.title
+      font-size: 38px
+
+    p.desc
+      font-size: 18px
+
+.contact-container 
+  margin-top: 15em
+  padding: 6em 1em
+  background-color: black
+  height: auto
+  color: white
+  text-align: center
+
+  .contact-text
+    padding: 1.5em 0em
+    letter-spacing: 1px
+
+  .greeting
+    color: white
+
+  button
+    background-color: transparent
+    border-color: white
+    border: solid
+    border-width: 2px
+    padding: 1em 5em
+
+  button:hover
+    background-color: white
+    border-color: white
+    border: solid
+    border-width: 2px
+    padding: 1em 5em
+
 
 @media (min-width: 992px) and (max-width: 1200px)
   .main-container
     padding: 0 4.8em
+
+  .projects-container
+    .projects button
+      width: 380px
+      height: 220px
+
+    .projects
+      p.title
+        font-size: 32px
+      p.desc
+        font-size: 15px
 
 @media (min-width: 768px) and (max-width: 992px)
   h1.title
@@ -208,6 +319,18 @@ button:hover
   .links-container .greeting
     text-align: left
     padding-left: 1em
+
+  .projects-container
+    .projects button
+      width: 350px
+      height: 250px
+    
+    .projects
+      p.title
+        font-size: 31px
+      p.desc
+        font-size: 15px
+
 
 @media (max-width: 768px)
   h1.title
@@ -256,5 +379,24 @@ button:hover
     .greeting
       text-align: left
       padding: 0.5em
+  
+  .portfolio-container
     
+    .greeting
+      text-align: right
+      margin-right: 0.5em
 
+  .projects-container
+
+    .greeting
+      margin-left: 0.5em
+
+    .projects button
+      width: 300px
+      height: 220px
+
+    .projects
+      p.title
+        font-size: 26px
+      p.desc
+        font-size: 14px

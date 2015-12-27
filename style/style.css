@@ -1,4 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,700italic,300);
+/* Variables */
+*:hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .row {
   margin: 0;
 }
@@ -74,11 +83,6 @@ button:hover {
   border-color: black;
   border: solid;
   border-width: 2px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 .photo-container-1, .main-photo-1 {
@@ -92,7 +96,7 @@ button:hover {
 }
 
 .photo-container-2 {
-  margin-top: 1.5em;
+  margin-top: 2em;
 }
 
 .main-photo-1 {
@@ -124,6 +128,7 @@ button:hover {
   text-decoration: underline;
 }
 
+/* Tilt containers to right upwards */
 .about-container, .links-header, .links-button-container {
   -webkit-transform: skewY(-1.5deg);
   -moz-transform: skewY(-1.5deg);
@@ -132,6 +137,7 @@ button:hover {
   transform: skewY(-1.5deg);
 }
 
+/* Tilt these containers to the right downwards */
 .about-description, .links-container, .about-description {
   -webkit-transform: skewY(1.5deg);
   -moz-transform: skewY(1.5deg);
@@ -140,6 +146,7 @@ button:hover {
   transform: skewY(1.5deg);
 }
 
+/* about container */
 .about-container {
   margin: 16em auto 0em;
   padding: 4em 0;
@@ -165,6 +172,7 @@ button:hover {
   font-size: 15px;
 }
 
+/* Links container styles */
 .links-container {
   margin: 1em auto;
   padding: 3em 0em 7.5em 0em;
@@ -200,9 +208,129 @@ button:hover {
   padding: 0.5em;
 }
 
+/* portfolio */
+.portfolio-container {
+  margin: 7em 0em 0em 0em;
+  padding: 9em 0em 4em 0em;
+  background-color: white;
+  height: auto;
+}
+
+.portfolio-container .greeting {
+  text-align: right;
+  margin-right: 2em;
+}
+
+.portfolio-container .portfolio {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: auto;
+  height: 1000px;
+  background-color: azure;
+  margin: 2em 0em;
+  padding: 2em;
+  text-align: center;
+}
+
+.portfolio-container button {
+  width: 171px;
+  text-align: center;
+  padding: 0.5em;
+}
+
+/* projects */
+.projects-container {
+  margin: 9em auto;
+  background-color: white;
+  height: auto;
+  text-align: center;
+}
+
+.projects-container .greeting {
+  text-align: left;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.projects-container .projects {
+  display: inline;
+  text-align: center;
+}
+
+.projects-container .projects a, .projects-container .projects a:hover {
+  text-decoration: none;
+}
+
+.projects-container .projects button {
+  text-align: center;
+  width: 480px;
+  height: 280px;
+  margin: 2em;
+  text-transform: none;
+  display: inline;
+}
+
+.projects-container .projects p, .projects-container .projects p:hover {
+  font-family: "Source Sans Pro", Calibri, Sans-Serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.projects-container .projects p.title {
+  font-size: 38px;
+}
+
+.projects-container .projects p.desc {
+  font-size: 18px;
+}
+
+.contact-container {
+  margin-top: 15em;
+  padding: 6em 1em;
+  background-color: black;
+  height: auto;
+  color: white;
+  text-align: center;
+}
+
+.contact-container .contact-text {
+  padding: 1.5em 0em;
+  letter-spacing: 1px;
+}
+
+.contact-container .greeting {
+  color: white;
+}
+
+.contact-container button {
+  background-color: transparent;
+  border-color: white;
+  border: solid;
+  border-width: 2px;
+  padding: 1em 5em;
+}
+
+.contact-container button:hover {
+  background-color: white;
+  border-color: white;
+  border: solid;
+  border-width: 2px;
+  padding: 1em 5em;
+}
+
 @media (min-width: 992px) and (max-width: 1200px) {
   .main-container {
     padding: 0 4.8em;
+  }
+  .projects-container .projects button {
+    width: 380px;
+    height: 220px;
+  }
+  .projects-container .projects p.title {
+    font-size: 32px;
+  }
+  .projects-container .projects p.desc {
+    font-size: 15px;
   }
 }
 
@@ -232,6 +360,16 @@ button:hover {
   .links-container .greeting {
     text-align: left;
     padding-left: 1em;
+  }
+  .projects-container .projects button {
+    width: 350px;
+    height: 250px;
+  }
+  .projects-container .projects p.title {
+    font-size: 31px;
+  }
+  .projects-container .projects p.desc {
+    font-size: 15px;
   }
 }
 
@@ -280,5 +418,22 @@ button:hover {
   .links-container .greeting {
     text-align: left;
     padding: 0.5em;
+  }
+  .portfolio-container .greeting {
+    text-align: right;
+    margin-right: 0.5em;
+  }
+  .projects-container .greeting {
+    margin-left: 0.5em;
+  }
+  .projects-container .projects button {
+    width: 300px;
+    height: 220px;
+  }
+  .projects-container .projects p.title {
+    font-size: 26px;
+  }
+  .projects-container .projects p.desc {
+    font-size: 14px;
   }
 }

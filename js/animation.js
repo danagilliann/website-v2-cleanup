@@ -1,7 +1,4 @@
 $(document).ready(function() {
-  /* Hide all containers upon loading*/
-  // $('#about-container').hide();
-
   /*
    * Window changes 
    * Have different height for different window.widths
@@ -14,9 +11,18 @@ $(document).ready(function() {
       $('p.about-description').addClass('animated fadeInUp');
     }
 
-    if (height > 600) { 
+    if (height > 570) { 
       $('#links-header').addClass('animated fadeInUp');
       $('.link-a').addClass('animated fadeInUp');
+    }
+
+    if (height > 800) { 
+      $('#portfolio-header').addClass('animated fadeInUp');
+    }
+
+    if (height > 2400) { 
+      $('#projects-header').addClass('animated fadeInUp');
+      $('.projects').addClass('animated fadeInUp');
     }
 
   });
@@ -56,7 +62,15 @@ $(document).ready(function() {
     }, 500);
     return false;
   });	
-  
+
+  $('body').on('click', '#featTalks', function() {
+    $('html, body').animate({
+        scrollTop: $("#featTalks-header").offset().top
+    }, 500);
+    return false;
+  }); 
+
+
   $('body').on('mouseenter mouseleave', 'img.main-photo-1', function() {
     $('img.main-photo-1').attr({
       src: $(this).attr('data-photoone-src'), 

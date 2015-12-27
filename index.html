@@ -9,6 +9,10 @@
 ///   ///  ////////  ///  ///  ////////             ||||
 -->
 <!doctype html>
+<!--====================================== TO DO UPON DEPLOYMENT ==========================================
+    1. Comment out the node_modules path
+    2. Uncomment the non-nodemodules
+===========================================================================================================-->
 <html ng-app="myWebsiteApp">
 	<head lang="en">
 		<meta charset="UTF-8">
@@ -18,8 +22,10 @@
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+		<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"-->
 		<link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/animate.css">
 	</head>
@@ -40,36 +46,77 @@
 		 </div>
 		</div>
 
-        <div class="about-container row">
-          <div class="hello-world"><h1 class="greeting">{{ greeting }}</h1></div>
-          <div class="about-description">
-            <p class="anim-description">{{ aboutDescription }}</p>
-            <br><br>
-            <p class="anim-description">This website is (always) a work in progress and is made with <span class="glyphicon glyphicon-heart"></span></p>
-                <h1 class="hidden">Dana Gilliann Lee</h1> 
-          </div>
-        </div>
+    <div class="about-container row">
+      <div class="hello-world"><h1 class="greeting">{{ aboutHead }}</h1></div>
+      <div class="about-description">
+        <p class="anim-description">{{ aboutDescription }}</p>
+        <br><br>
+        <p class="anim-description">This website is (always) a work in progress and is made with <span class="glyphicon glyphicon-heart"></span></p>
+            <h1 class="hidden">Dana Gilliann Lee</h1> 
+      </div>
+    </div>
 
-        <div class="links-container row">
-          <div id="links-header">
-            <h1 class="greeting">{{ linkHeader }}</h1>
-          </div>
-          <div class="links-wrapper">
-            <div class="links-button-container" ng-repeat="linkLi in linkList">
-             <a href="{{ linkLi.href }}">
-               <button id="{{ linkLi.id }}" class="link-a"><p>{{ linkLi.title }}</p></button>
-             </a>
-            </div>
-          </div>
+    <div class="links-container row">
+      <div id="links-header">
+        <h1 class="greeting">{{ linkHeader }}</h1>
+      </div>
+      <div class="links-wrapper">
+        <div class="links-button-container" ng-repeat="linkLi in linkList">
+         <a href="{{ linkLi.href }}">
+           <button id="{{ linkLi.id }}" class="link-a"><p>{{ linkLi.title }}</p></button>
+         </a>
         </div>
+      </div>
+    </div>
+
+    <!--div class="featTalks row">
+      <div id="featTalks-header"><h1 class="greeting">{{ featTalksHeader }}</h1></div>
+    </div-->
+
+    <div class="portfolio-container row">
+      <div id="portfolio-header"><h1 class="greeting">{{ portfolioHeader }}</h1></div>
+      <div class="portfolio">
+        <div class="portfolioImg"></div>
+        <a href="{{ viewLink }}"><button><p>{{ viewText }}</p></button></a>
+      </div>
+    </div>
+
+    <div class="projects-container row">
+      <div id="projects-header"><h1 class="greeting">{{ projectHeader }}</h1></div>
+      <div class="projects" ng-repeat="proj in projects">
+        <a href="{{ proj.href }}">
+          <button>
+            <p class="title">{{ proj.title }}</p>
+            <p class="desc">{{ proj.desc }}</p>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-container row">
+      <div id="contact-header"><h1 class="greeting">{{ contactHeader }}</h1></div>
+      <div class="contact-text">
+        <p>
+          {{ contactSubHeader }}
+          <br>
+          {{ contactDesc }}
+        </p>
+      </div>
+      <a href="{{ contactEmailHref }}"><button id="contact-email"><p>{{ contactEmail }}</p></button></a>
+      </div>
+    </div>
 
 
 	</body>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>		
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/animation.js"></script>
+
+  <!-- Scripts -->
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>		
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script-->
+  <script src="js/scopes.js"></script>
+  <script src="js/animation.js"></script>
+  <!--script src="js/apiCall.js"></script-->
 
 </html>
 
