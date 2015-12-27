@@ -1,6 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,700italic,300);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,300);
 /* Variables */
-*:hover {
+* {
+  font-family: "Source Sans Pro", Calibri, Sans-Serif;
+}
+
+button, .about-description, .contact-text {
+  font-weight: 300;
+}
+
+button:hover, .main-photo-1:hover, .main-photo-2:hover {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -83,6 +91,7 @@ button:hover {
   border-color: black;
   border: solid;
   border-width: 2px;
+  font-weight: 400;
 }
 
 .photo-container-1, .main-photo-1 {
@@ -225,7 +234,7 @@ button:hover {
   overflow-x: scroll;
   overflow-y: hidden;
   width: auto;
-  height: 1000px;
+  height: auto;
   background-color: azure;
   margin: 2em 0em;
   padding: 2em;
@@ -272,7 +281,6 @@ button:hover {
 
 .projects-container .projects p, .projects-container .projects p:hover {
   font-family: "Source Sans Pro", Calibri, Sans-Serif;
-  font-weight: 300;
   text-align: center;
 }
 
@@ -296,6 +304,7 @@ button:hover {
 .contact-container .contact-text {
   padding: 1.5em 0em;
   letter-spacing: 1px;
+  font-weight: 300;
 }
 
 .contact-container .greeting {
@@ -316,6 +325,15 @@ button:hover {
   border: solid;
   border-width: 2px;
   padding: 1em 5em;
+}
+
+.copyright {
+  background-color: white;
+  padding: 0.5em;
+}
+
+.copyright p {
+  text-align: center;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {

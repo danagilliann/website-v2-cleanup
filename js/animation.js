@@ -16,12 +16,15 @@ $(document).ready(function() {
       $('.link-a').addClass('animated fadeInUp');
     }
 
-    if (height > 800) { 
+    if (height > 900) { 
       $('#portfolio-header').addClass('animated fadeInUp');
     }
 
-    if (height > 2400) { 
+    if (height > 2300) { 
       $('#projects-header').addClass('animated fadeInUp');
+    }
+
+    if (height > 2480) { 
       $('.projects').addClass('animated fadeInUp');
     }
 
