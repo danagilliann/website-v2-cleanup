@@ -8,10 +8,21 @@ app.controller('MainController', function($scope, $http) {
   
   function fetch() { 
     var tumblrCall = tumblrJSON();
-    $http.get(tumblrCall)
-      .success(function(res) { 
-        console.log(res.response.posts[0].photos[0].original_size.url); /* Photos is always 0 */
-      });
+
+    $http.get(tumblrJSON())
+      .then(function successCallback(response) {
+      console.log(res);
+      // console.log(res.response.posts[0].photos[0].original_size.url); /* Photos is always 0 */
+    });
+
+    // $http.get(tumblrCall, {
+    //     method:'JSONP'
+    //   }
+    // )
+    //   .success(function(res) { 
+    //     console.log(res);
+    //     // console.log(res.response.posts[0].photos[0].original_size.url); /* Photos is always 0 */
+    //   });
   }
 
   fetch();

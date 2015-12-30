@@ -10,8 +10,6 @@ $(document).ready(function() {
     var aboutTop = Math.ceil($('.about-container').offset().top);
 
     if (height > 230) {
-      /* Sort of works with "==" but buggy af (could be lack of internet???)*/
-      console.log("fhdkjgfhajkdfg");
       $('.anim-description').addClass('animated fadeInUp');
       $('.hello-world').addClass('animated fadeInUp');
       $('p.about-description').addClass('animated fadeInUp');
