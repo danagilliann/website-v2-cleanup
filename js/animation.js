@@ -1,17 +1,23 @@
 $(document).ready(function() {
+  //console.log($('.about-container').offset());
+  
   /*
    * Window changes 
    * Have different height for different window.widths
    */
   $(window).scroll(function() { 
     var height = $(window).scrollTop();
-    if (height > 200) {
+    var aboutTop = Math.ceil($('.about-container').offset().top);
+
+    if (height > 230) {
+      /* Sort of works with "==" but buggy af (could be lack of internet???)*/
+      console.log("fhdkjgfhajkdfg");
       $('.anim-description').addClass('animated fadeInUp');
       $('.hello-world').addClass('animated fadeInUp');
       $('p.about-description').addClass('animated fadeInUp');
     }
 
-    if (height > 570) { 
+    if (height > 540) { 
       $('#links-header').addClass('animated fadeInUp');
       $('.link-a').addClass('animated fadeInUp');
     }

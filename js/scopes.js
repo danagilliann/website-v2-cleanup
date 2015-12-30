@@ -1,6 +1,21 @@
 var app = angular.module('myWebsiteApp', []);
 
 app.controller('MainController', function($scope, $http) { 
+  /* functions */
+  function tumblrJSON() { 
+    return "http://api.tumblr.com/v2/blog/dana-lee-graphics.tumblr.com/posts/photo?api_key=GCXjNaLltIgQ0LQC9K8eS4xg1xwHEwmEcaPK9OYnVcnDLbqyaN&limit=6";
+  }
+  
+  function fetch() { 
+    var tumblrCall = tumblrJSON();
+    $http.get(tumblrCall)
+      .success(function(res) { 
+        console.log(res.response.posts[0].photos[0].original_size.url); /* Photos is always 0 */
+      });
+  }
+
+  fetch();
+
   /* Main row */
   $scope.title = "Dana Lee";
   $scope.buttonGuides = [ 
@@ -12,10 +27,6 @@ app.controller('MainController', function($scope, $http) {
       title:'Links', 
       id:"links"
     },
-    // { 
-    //   title:'Features & Talks',
-    //   id:"featTalks"
-    // },
     {
       title:'Portfolio', 
       id:"portfolio"
@@ -62,6 +73,13 @@ app.controller('MainController', function($scope, $http) {
       id: 'linkedin', 
       href: 'https://www.linkedin.com/in/danagilliann'
     }
+    /*
+    {
+      title: 'Press',
+      id: 'press',
+      href: '/'
+    }
+    */
   ];
 
   /* Features and talks row */
