@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  //console.log($('.about-container').offset());
-  
   /*
    * Window changes 
    * Have different height for different window.widths
@@ -22,10 +20,6 @@ $(document).ready(function() {
     if (height > 900) { 
       $('#portfolio-header').addClass('animated fadeInUp');
       $('.tumblrImg').addClass('animated fadeInUp');
-    }
-
-    if (height > 1140) { 
-      $('#projects-header').addClass('animated fadeInUp');
     }
 
     if (height > 2210) { 
