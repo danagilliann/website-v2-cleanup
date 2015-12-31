@@ -7,15 +7,16 @@ $(document).ready(function() {
    */
   $(window).scroll(function() { 
     var height = $(window).scrollTop();
-    var aboutTop = Math.ceil($('.about-container').offset().top);
 
-    if (height > 230) {
+    console.log(height);
+    
+    if (height > 200) {
       $('.anim-description').addClass('animated fadeInUp');
       $('.hello-world').addClass('animated fadeInUp');
       $('p.about-description').addClass('animated fadeInUp');
     }
 
-    if (height > 540) { 
+    if (height > 500) { 
       $('#links-header').addClass('animated fadeInUp');
       $('.link-a').addClass('animated fadeInUp');
     }
@@ -25,12 +26,13 @@ $(document).ready(function() {
       $('.tumblrImg').addClass('animated fadeInUp');
     }
 
-    if (height > 1300) { 
+    if (height > 1140) { 
       $('#projects-header').addClass('animated fadeInUp');
     }
 
-    if (height > 1480) { 
-      $('.projects').addClass('animated fadeInUp');
+    if (height > 2210) { 
+      $('#projects-header').addClass('animated fadeInUp');
+      $('.proj-button').addClass('animated fadeInUp');
     }
 
   });
