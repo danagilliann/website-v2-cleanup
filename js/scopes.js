@@ -8,24 +8,46 @@ app.controller('MainController', function($scope, $http) {
   
   function fetch() { 
     var tumblrCall = tumblrJSON();
+    var tumblrPhotos = [];
+    $scope.tumblrImages= tumblrPhotos;
 
-    $http.get(tumblrJSON())
-      .then(function successCallback(response) {
-      console.log(res);
-      // console.log(res.response.posts[0].photos[0].original_size.url); /* Photos is always 0 */
+    $http.jsonp("http://api.tumblr.com/v2/blog/dana-lee-graphics.tumblr.com/posts/photo?api_key=GCXjNaLltIgQ0LQC9K8eS4xg1xwHEwmEcaPK9OYnVcnDLbqyaN&limit=6&callback=JSON_CALLBACK")
+    .then(function(res) {
+      var posts = res.data.response.posts;
+      for (var p in posts) {
+        /* Gets photo url and pushes it to tumblrPhotos array */
+        tumblrPhotos.push(posts[p].photos[0].original_size.url);
+      }
     });
-
-    // $http.get(tumblrCall, {
-    //     method:'JSONP'
-    //   }
-    // )
-    //   .success(function(res) { 
-    //     console.log(res);
-    //     // console.log(res.response.posts[0].photos[0].original_size.url); /* Photos is always 0 */
-    //   });
   }
 
   fetch();
+
+  /* Press page */
+  $scope.talks = [ 
+    {
+      date: 'November 12, 2015',
+      title: 'What is Computer Science?',
+      href: 'http://nyuwinc.org/program/'
+    },
+    {
+      date: 'October 22, 2015',
+      title: 'How I "Git Committed" to Engineering',
+      href: 'press.html'
+    },
+    { 
+      date: 'October 10, 2015',
+      title: 'Local Hack Day: Animations and Transitions with CSS',
+      href: 'https://www.youtube.com/watch?v=6tqPOXhSqog&index=9&list=PLPDgudJ_VDUfjvhrrJY43yIgEiHluJ1yE'
+    }
+  ];
+
+  $scope.features = [ 
+    { 
+      title: 'Tech@NYU\'s Lady Leadership is Breaking Industry Barriers',
+      href: 'http://nyulocal.com/on-campus/2015/09/10/technyus-lady-leadership-is-breaking-industry-barriers/'
+    }
+  ];
 
   /* Main row */
   $scope.title = "Dana Lee";
@@ -83,14 +105,12 @@ app.controller('MainController', function($scope, $http) {
       title: 'LinkedIn', 
       id: 'linkedin', 
       href: 'https://www.linkedin.com/in/danagilliann'
-    }
-    /*
+    },
     {
       title: 'Press',
       id: 'press',
-      href: '/'
+      href: 'press.html'
     }
-    */
   ];
 
   /* Features and talks row */
@@ -100,9 +120,6 @@ app.controller('MainController', function($scope, $http) {
   $scope.portfolioHeader = "Portfolio:";
   $scope.viewLink = "http://dana-lee-graphics.tumblr.com/";
   $scope.viewText = "View More >>";
-
-  /* Making the API call to Tumblr */
-  /* TO DO: Make new .js file which contains only the API call */
 
   /* Project row */
   $scope.projectHeader = "Projects:";
@@ -125,6 +142,7 @@ app.controller('MainController', function($scope, $http) {
     desc: 'Learn about that time of the month',
     href: 'http://terriburns.com/the-periodical'
   },
+
   { 
     title: 'Meyow',
     id: 'meyow',

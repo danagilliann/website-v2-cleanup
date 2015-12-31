@@ -22,13 +22,14 @@ $(document).ready(function() {
 
     if (height > 900) { 
       $('#portfolio-header').addClass('animated fadeInUp');
+      $('.tumblrImg').addClass('animated fadeInUp');
     }
 
-    if (height > 2300) { 
+    if (height > 1300) { 
       $('#projects-header').addClass('animated fadeInUp');
     }
 
-    if (height > 2480) { 
+    if (height > 1480) { 
       $('.projects').addClass('animated fadeInUp');
     }
 

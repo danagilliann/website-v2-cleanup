@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="myWebsiteApp">
+  <head>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/animate.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>Dana Lee - Press</title>
+  </head>
+  <body ng-controller="MainController" class="animated fadeInUp">
+    <h1 class="greeting">Press:</h1>
+    <h2>Talks</h2>
+    <p ng-repeat="talk in talks"><a href="{{ talk.href }}" class="a-press">{{ talk.date }} - {{ talk.title }}</a></p>
+    <h2>Features</h2>
+    <p ng-repeat="feature in features"><a href="{{ feature.href }}" class="a-press">{{ feature.title }}</a></p>
+    <h2><a href="index.html" class="a-press">Home</a></h2>
+  </body>
+
+  <!-- scripts -->
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="js/scopes.js"></script>
+</html>

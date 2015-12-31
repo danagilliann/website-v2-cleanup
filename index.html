@@ -27,7 +27,7 @@
 		<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"-->
 		<link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/animate.css">
+    <link rel="stylesheet" href="style/animate.css">
 	</head>
 
 	<body ng-controller="MainController">
@@ -66,14 +66,12 @@
       </div>
     </div>
 
-    <!--div class="featTalks row">
-      <div id="featTalks-header"><h1 class="greeting">{{ featTalksHeader }}</h1></div>
-    </div-->
-
     <div class="portfolio-container row">
       <div id="portfolio-header"><h1 class="greeting">{{ portfolioHeader }}</h1></div>
       <div class="portfolio">
-        <div class="portfolioImg"></div>
+        <div class="portfolioImg">
+          <img class="tumblrImg" ng-repeat="tumblrImg in tumblrImages" src="{{ tumblrImg }}"/>
+        </div>
         <a href="{{ viewLink }}"><button><p>{{ viewText }}</p></button></a>
       </div>
     </div>

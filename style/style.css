@@ -1,14 +1,27 @@
+/* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,300);
 /* Variables */
+.center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 * {
   font-family: "Source Sans Pro", Calibri, Sans-Serif;
+  text-align: center;
 }
 
 button, .about-description, .contact-text {
   font-weight: 300;
 }
 
-button:hover, .main-photo-1:hover, .main-photo-2:hover {
+/* Smooth hover */
+button:hover, .main-photo-1:hover, .main-photo-2:hover, img:hover, .a-press:hover {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -94,6 +107,11 @@ button:hover {
   font-weight: 400;
 }
 
+.a-press:hover {
+  color: #A8A8A8;
+}
+
+/* Main bit */
 .photo-container-1, .main-photo-1 {
   margin: 0 auto;
   display: block;
@@ -239,6 +257,22 @@ button:hover {
   margin: 2em 0em;
   padding: 2em;
   text-align: center;
+}
+
+.portfolio-container .portfolioImg {
+  text-align: center;
+  padding-bottom: 5em;
+}
+
+.portfolio-container .portfolioImg img {
+  width: auto;
+  height: 400px;
+  margin: 2em;
+  vertical-align: middle;
+}
+
+.portfolio-container .portfolioImg img:hover {
+  height: 420px;
 }
 
 .portfolio-container button {
