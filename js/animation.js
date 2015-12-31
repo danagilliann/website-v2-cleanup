@@ -8,8 +8,6 @@ $(document).ready(function() {
   $(window).scroll(function() { 
     var height = $(window).scrollTop();
 
-    console.log(height);
-    
     if (height > 200) {
       $('.anim-description').addClass('animated fadeInUp');
       $('.hello-world').addClass('animated fadeInUp');
