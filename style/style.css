@@ -426,9 +426,6 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  #contact-email {
-    width: 260px;
-  }
   h1.title {
     font-size: 70px;
   }
@@ -499,5 +496,9 @@ button:hover {
   }
   .projects-container .projects p.desc {
     font-size: 14px;
+  }
+  .contact-container button {
+    width: 260px;
+    padding: 1em 2em;
   }
 }
