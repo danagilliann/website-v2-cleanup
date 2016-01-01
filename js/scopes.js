@@ -1,4 +1,4 @@
-var app = angular.module('myWebsiteApp', []);
+var app = angular.module('myWebsiteApp', ['ngSanitize']);
 
 app.controller('MainController', function($scope, $http) { 
   /* functions */
@@ -76,7 +76,7 @@ app.controller('MainController', function($scope, $http) {
 
   /* About row */
   $scope.aboutHead = "Hello World!";
-  $scope.aboutDescription = "I'm Dana Lee! I'm from the Philippines studying Computer Science at New York University. I love hackathons, coding, coffee, sleep, yoga, design, jokes, and food. When I feel sad I dance to 90/00s music or sing Beyonce songs. I'm also a fan of promoting ladiez in technology. If you're reading this, we should be friends!!";
+  $scope.aboutDescription = "I'm Dana Lee! I'm from the Philippines studying Computer Science at New York University. I love hackathons, coding, coffee, sleep, yoga, design, jokes, Beyonce, and food. I currently work at <a href=\"https://www.google.com\">Google</a> and used to work at a startup called <a href=\"https://www.beautybooked.com/home\">BeautyBooked</a>. For Summer 2015, I'll be working at <a href=\"http://www.behance.com/\">Adobe Behance</a>. At NYU, I am part of <a href=\"http://techatnyu.org/\">Tech@NYU</a> and <a href=\"http://nyuwinc.org/\">Women in Computing</a>. I love promoting ladiez in technology, and I'm working on being an intersectional feminist. If you're reading this, we should be friends!!";
 
   /* Links row */
   $scope.linkHeader = "Links:";

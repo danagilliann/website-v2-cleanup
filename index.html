@@ -45,7 +45,7 @@
     <div class="about-container row">
       <div class="hello-world"><h1 class="greeting">{{ aboutHead }}</h1></div>
       <div class="about-description">
-        <p class="anim-description">{{ aboutDescription }}</p>
+        <p ng-bind-html="aboutDescription" class="anim-description"></p>
       </div>
     </div>
 
@@ -105,8 +105,12 @@
 	</body>
 
   <!-- Scripts -->
+  <!-- CDNs -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>		
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.min.js"></script>
+
+  <!-- JS files -->
   <script src="js/scopes.js"></script>
   <script src="js/animation.js"></script>
 

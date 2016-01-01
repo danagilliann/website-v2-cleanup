@@ -9,6 +9,16 @@
 a {
   text-decoration: none;
   color: black;
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.a-press:hover {
+  color: #A8A8A8;
 }
 
 * {
@@ -16,12 +26,16 @@ a {
   text-align: center;
 }
 
-button, .about-description, .contact-text {
+button, .contact-text {
   font-weight: 300;
 }
 
+.about-description {
+  font-weight: 400;
+}
+
 /* Smooth hover */
-button:hover, .main-photo-1:hover, .main-photo-2:hover, img:hover, .a-press:hover {
+button:hover, .main-photo-1:hover, .main-photo-2:hover, img:hover, .a-press:hover, a:hover {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -105,10 +119,6 @@ button:hover {
   border: solid;
   border-width: 2px;
   font-weight: 400;
-}
-
-.a-press:hover {
-  color: #A8A8A8;
 }
 
 /* Main bit */
@@ -205,6 +215,10 @@ button:hover {
   padding: 3em 0em 7.5em 0em;
   background-color: #FDE8E7;
   text-align: center;
+}
+
+.links-container a:hover {
+  text-decoration: none;
 }
 
 .links-container .greeting {
