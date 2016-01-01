@@ -17,7 +17,12 @@ a:hover {
   color: black;
 }
 
-.a-press:hover {
+a.a-press, a.a-press:focus, a.a-press:visited {
+  font-weight: 400;
+}
+
+a.a-press:hover {
+  text-decoration: none;
   color: #A8A8A8;
 }
 
