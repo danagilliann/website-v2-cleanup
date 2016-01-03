@@ -66,7 +66,9 @@
       <div id="portfolio-header"><h1 class="greeting">{{ portfolioHeader }}</h1></div>
       <div class="portfolio">
         <div class="portfolioImg">
-          <img class="tumblrImg" ng-repeat="tumblrImg in tumblrImages" src="{{ tumblrImg }}"/>
+          <a ng-repeat="tumblrImage in tumblrImages" href="{{ tumblrImage.href }}">
+            <img class="tumblrImg" src="{{ tumblrImage.img }}"/>
+          </a>
         </div>
         <a href="{{ viewLink }}"><button><p>{{ viewText }}</p></button></a>
       </div>
