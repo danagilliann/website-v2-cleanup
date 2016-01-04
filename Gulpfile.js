@@ -1,4 +1,5 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    minify = require('gulp-minify'),
     sass = require('gulp-sass'),
     input = './sass/*.sass',
     output = './style',
@@ -9,12 +10,21 @@ var gulp = require('gulp');
 
 gulp.task('default', ['sass', 'watch']);
 
+gulp.task('compress', function() {
+  gulp.src('./js/*.js')
+    .pipe(minify({
+      exclude: ['tasks'],
+      ignoreFiles: ['.combo.js','-min.js']
+    }))
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('watch', function() { 
 	return gulp
 		.watch(input, ['sass'])
 		.on('change', function(event) { 
 			console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-		})
+		});
 });
 
 gulp.task('sass', function() { 
