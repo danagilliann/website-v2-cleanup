@@ -17,6 +17,12 @@ gulp.task('compress', function() {
       ignoreFiles: ['.combo.js','-min.js']
     }))
     .pipe(gulp.dest('dist'));
+  gulp.src('./*.html')
+    .pipe(minify({}))
+    .pipe(gulp.dest('dist'));
+  gulp.src('./style/*.css')
+    .pipe(minify({}))
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() { 

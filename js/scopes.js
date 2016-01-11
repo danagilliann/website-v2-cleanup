@@ -75,7 +75,7 @@ app.controller('MainController', function($scope, $http) {
 
   /* About row */
   $scope.aboutHead = "Hello World!";
-  $scope.aboutDescription = "I'm Dana Lee! I'm from the Philippines studying Computer Science at NYU (New York University). I love hackathons, coding, coffee, sleep, yoga, design, jokes, Beyonce, and food. I currently work at <a href=\"https://www.google.com\">Google</a> and used to work at a startup called <a href=\"https://www.beautybooked.com/home\">BeautyBooked</a>. For Summer 2015, I'll be working at <a href=\"http://www.behance.com/\">Adobe Behance</a>. At NYU, I am part of <a href=\"http://techatnyu.org/\">Tech@NYU</a> and <a href=\"http://nyuwinc.org/\">Women in Computing</a>. I love promoting ladiez in technology, and I'm working on being an intersectional feminist. If you're reading this, we should be friends!!";
+  $scope.aboutDescription = "I'm Dana Lee! I'm from the Philippines studying Computer Science at NYU (New York University). I love hackathons, coding, coffee, sleep, yoga, design, jokes, Beyonce, and food. I'm currently a Student Ambassador for <a href=\"https://www.google.com\">Google</a>, and I used to work at a startup called <a href=\"https://www.beautybooked.com/home\">BeautyBooked</a>. For Summer 2015, I'll be working at <a href=\"http://www.behance.com/\">Adobe Behance</a>. At NYU, I am part of <a href=\"http://techatnyu.org/\">Tech@NYU</a> and <a href=\"http://nyuwinc.org/\">Women in Computing</a>. I love promoting ladiez in technology, and I'm working on being a better intersectional feminist. If you're reading this, we should be friends!!";
 
   /* Links row */
   $scope.linkHeader = "Links:";
@@ -157,8 +157,20 @@ app.controller('MainController', function($scope, $http) {
   { 
     title: 'Git Committed',
     id: 'git-committed',
-    desc: 'Helps you commit while Git-ing',
+    desc: 'Commit while Git-ing',
     href: 'http://gitcommitted.co'
+  },
+  {
+    title: 'Say It Back',
+    id: 'say-it-back',
+    desc: 'Kareoke on the Internet',
+    href: '/' // Say it back Firebase
+  },
+  { 
+    title: 'MedCheck',
+    id: 'medcheck',
+    desc: 'Helps doctors connect to patients',
+    href: '/' // Link to Sushi
   }];
 
   /* Contacts row */
