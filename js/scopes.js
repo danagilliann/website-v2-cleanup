@@ -164,13 +164,13 @@ app.controller('MainController', function($scope, $http) {
     title: 'Say It Back',
     id: 'say-it-back',
     desc: 'Kareoke on the Internet',
-    href: '/' // Say it back Firebase
+    href: 'https://sayitback.firebaseapp.com/' 
   },
   { 
     title: 'MedCheck',
     id: 'medcheck',
     desc: 'Helps doctors connect to patients',
-    href: '/' // Link to Sushi
+    href: 'http://ramen.hackgt.com/ramen-as-a-service/app/submission_view.php?id=564d129244bebd3f4733546c&p_id=564d129244bebd3f47335454&filter=&start_from=0&length=119&from_page=2' // Link to Sushi
   }];
 
   /* Contacts row */
