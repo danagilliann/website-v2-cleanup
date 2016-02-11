@@ -171,6 +171,18 @@ app.controller('MainController', function($scope, $http) {
     id: 'medcheck',
     desc: 'Helps doctors connect to patients',
     href: 'http://ramen.hackgt.com/ramen-as-a-service/app/submission_view.php?id=564d129244bebd3f4733546c&p_id=564d129244bebd3f47335454&filter=&start_from=0&length=119&from_page=2' // Link to Sushi
+  },
+  {
+    title: 'Sugar Trails',
+    id: 'sugar-trails',
+    desc: 'Helps Diabetics monitor glucose',
+    href: 'http://devpost.com/software/sugar-trails-zou0tb'
+  },
+  {
+    title: 'DemoDays',
+    id: 'demodays',
+    desc: 'Updated Tech@NYU site',
+    href: 'http://demodays.co/'
   }];
 
   /* Contacts row */
