@@ -521,3 +521,10 @@ button:hover {
     padding: 1em 2em;
   }
 }
+
+@media (max-width: 400px) {
+  .projects-container .projects button {
+    width: 250px;
+    height: 260px;
+  }
+}
