@@ -139,7 +139,7 @@ app.controller('MainController', function($scope, $http) {
     title: 'The Periodical',
     id: 'the-periodical',
     desc: 'Learn about that time of the month',
-    href: 'http://terriburns.com/the-periodical'
+    href: 'http://tcburning.com/the-periodical'
   },
 
   { 
@@ -181,7 +181,7 @@ app.controller('MainController', function($scope, $http) {
   {
     title: 'DemoDays',
     id: 'demodays',
-    desc: 'Updated Tech@NYU site',
+    desc: 'Refactored Tech@NYU site',
     href: 'http://demodays.co/'
   }];
 

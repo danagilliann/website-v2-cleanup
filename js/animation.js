@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  $('.anim-description, .hello-world, p.about-description').css({"visibility": "hidden"});
+  $('#links-header, .link-a').css({"visibility": "hidden"});
+  $('#portfolio-header, .tumblrImg').css({"visibility": "hidden"});
+  $('#projects-header, .proj-button').css({"visibility": "hidden"});
+
   /*
    * Window changes 
    * Have different height for different window.widths
@@ -7,24 +12,19 @@ $(document).ready(function() {
     var height = $(window).scrollTop();
 
     if (height > 200) {
-      $('.anim-description').addClass('animated fadeInUp');
-      $('.hello-world').addClass('animated fadeInUp');
-      $('p.about-description').addClass('animated fadeInUp');
+      $('.anim-description, .hello-world, p.about-description').css({"visibility": "visible"}).addClass('animated fadeInUp');
     }
 
     if (height > 500) { 
-      $('#links-header').addClass('animated fadeInUp');
-      $('.link-a').addClass('animated fadeInUp');
+      $('#links-header, .link-a').css({"visibility": "visible"}).addClass('animated fadeInUp');
     }
 
-    if (height > 900) { 
-      $('#portfolio-header').addClass('animated fadeInUp');
-      $('.tumblrImg').addClass('animated fadeInUp');
+    if (height > 920) { 
+      $('#portfolio-header, .tumblrImg').css({"visibility": "visible"}).addClass('animated fadeInUp');
     }
 
-    if (height > 2210) { 
-      $('#projects-header').addClass('animated fadeInUp');
-      $('.proj-button').addClass('animated fadeInUp');
+    if (height > 2220) { 
+      $('#projects-header, .proj-button').css({"visibility": "visible"}).addClass('animated fadeInUp');
     }
 
   });
