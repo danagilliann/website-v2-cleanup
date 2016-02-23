@@ -45,6 +45,10 @@ app.controller('MainController', function($scope, $http) {
     { 
       title: 'Tech@NYU\'s Lady Leadership is Breaking Industry Barriers',
       href: 'http://nyulocal.com/on-campus/2015/09/10/technyus-lady-leadership-is-breaking-industry-barriers/'
+    },
+    {
+      title: 'Demo Days Gets a New Formation',
+      href: 'https://blog.techatnyu.org/demo-days-gets-a-new-formation-1e14241f1798#.qv3novfsw'
     }
   ];
 
