@@ -52,6 +52,13 @@ app.controller('MainController', function($scope, $http) {
     }
   ];
 
+  $scope.writings = [
+    {
+      title: "I Have A Question...",
+      href: "https://medium.com/@danagilliann/i-have-a-question-aeaec597115a#.jdeflb37q"
+    }
+  ];
+
   /* Main row */
   $scope.title = "Dana Lee";
   $scope.buttonGuides = [ 
