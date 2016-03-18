@@ -54,7 +54,7 @@ app.controller('MainController', function($scope, $http) {
 
   $scope.writings = [
     {
-      title: "I Have A Question...",
+      title: "I Have A Question...But I'm to scared to ask | Code Like A Girl",
       href: "https://medium.com/@danagilliann/i-have-a-question-aeaec597115a#.jdeflb37q"
     }
   ];
