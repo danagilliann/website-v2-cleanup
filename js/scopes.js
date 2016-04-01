@@ -38,6 +38,11 @@ app.controller('MainController', function($scope, $http) {
       date: 'October 10, 2015',
       title: 'Local Hack Day: Animations and Transitions with CSS',
       href: 'https://www.youtube.com/watch?v=6tqPOXhSqog&index=9&list=PLPDgudJ_VDUfjvhrrJY43yIgEiHluJ1yE'
+    },
+    {
+      date: 'March 28, 2016',
+      title: 'Getting Started with Git',
+      href: 'https://github.com/nyuwinc/git-ready-for-it'
     }
   ];
 
@@ -49,6 +54,10 @@ app.controller('MainController', function($scope, $http) {
     {
       title: 'Demo Days Gets a New Formation',
       href: 'https://blog.techatnyu.org/demo-days-gets-a-new-formation-1e14241f1798#.qv3novfsw'
+    },
+    {
+      title: 'Flawless Hacks: Meet the Organizer',
+      href: 'https://www.facebook.com/flawlesshacks/photos/a.1724646087748986.1073741828.1723329671213961/1729681810578747/?type=3&theater'
     }
   ];
 
