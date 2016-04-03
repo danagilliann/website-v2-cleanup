@@ -199,10 +199,10 @@ app.controller('MainController', function($scope, $http) {
     href: 'http://devpost.com/software/sugar-trails-zou0tb'
   },
   {
-    title: 'DemoDays',
-    id: 'demodays',
-    desc: 'Refactored Tech@NYU site',
-    href: 'http://demodays.co/'
+    title: 'Lit',
+    id: 'lit',
+    desc: 'Know which places are lit' ,
+    href: 'https://github.com/danagilliann/lit'
   }];
 
   /* Contacts row */
