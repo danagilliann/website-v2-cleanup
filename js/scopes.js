@@ -58,6 +58,10 @@ app.controller('MainController', function($scope, $http) {
     {
       title: 'Flawless Hacks: Meet the Organizer',
       href: 'https://www.facebook.com/flawlesshacks/photos/a.1724646087748986.1073741828.1723329671213961/1729681810578747/?type=3&theater'
+    },
+    {
+      title: 'Meet the NYU Computer Scientists who founded a female-only hackathon',
+      href: 'https://thetab.com/us/nyu/2016/04/04/flawless-hacks-5285'
     }
   ];
 

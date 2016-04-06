@@ -88,6 +88,10 @@ p {
   text-align: center;
 }
 
+p.press {
+  padding: 0.5em;
+}
+
 button {
   background-color: black;
   color: white;
