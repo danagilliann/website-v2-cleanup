@@ -60,14 +60,14 @@ app.controller('MainController', function($scope, $http) {
       href: 'https://www.facebook.com/flawlesshacks/photos/a.1724646087748986.1073741828.1723329671213961/1729681810578747/?type=3&theater'
     },
     {
-      title: 'Meet the NYU Computer Scientists who founded a female-only hackathon',
+      title: 'Meet the NYU Computer Scientists who founded a hackathon for women',
       href: 'https://thetab.com/us/nyu/2016/04/04/flawless-hacks-5285'
     }
   ];
 
   $scope.writings = [
     {
-      title: "I Have A Question...But I'm to scared to ask | Code Like A Girl",
+      title: "I Have A Question...But I'm too scared to ask | Code Like A Girl",
       href: "https://medium.com/@danagilliann/i-have-a-question-aeaec597115a#.jdeflb37q"
     }
   ];
