@@ -62,6 +62,10 @@ app.controller('MainController', function($scope, $http) {
     {
       title: 'Meet the NYU Computer Scientists who founded a hackathon for women',
       href: 'https://thetab.com/us/nyu/2016/04/04/flawless-hacks-5285'
+    },
+    {
+      title: 'Watch Out, Tech World - NYU Students Launch All-Women Hackathon',
+      href: 'http://www.nyunews.com/2016/04/20/watch-out-tech-world-nyu-students-launch-all-female-hackathon/'
     }
   ];
 
