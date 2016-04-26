@@ -66,6 +66,10 @@ app.controller('MainController', function($scope, $http) {
     {
       title: 'Watch Out, Tech World - NYU Students Launch All-Women Hackathon',
       href: 'http://www.nyunews.com/2016/04/20/watch-out-tech-world-nyu-students-launch-all-female-hackathon/'
+    },
+    {
+      title: 'Women Who Reign: Dana Lee',
+      href: 'https://medium.com/@ReigningIt/women-who-reign-dana-lee-3884fc2474c3#.tgm2ct1o6'
     }
   ];
 
