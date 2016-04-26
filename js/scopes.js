@@ -118,11 +118,6 @@ app.controller('MainController', function($scope, $http) {
       href:'https://twitter.com/danagilliann'
     },
     {
-      title:'Resume', 
-      id: 'resume', 
-      href: 'resume.pdf'
-    },
-    {
       title:'Instagram', 
       id: 'instagram', 
       href: 'https://instagram.com/danagilliann/'
@@ -136,6 +131,16 @@ app.controller('MainController', function($scope, $http) {
       title: 'LinkedIn', 
       id: 'linkedin', 
       href: 'https://www.linkedin.com/in/danagilliann'
+    },
+    {
+      title: 'Medium',
+      id: 'medium',
+      href: 'https://medium.com/@danagilliann'
+    },
+    {
+      title:'Resume', 
+      id: 'resume', 
+      href: 'resume.pdf'
     },
     {
       title: 'Press',
